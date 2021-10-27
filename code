@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Koledna_elha
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int input = int.Parse(Console.ReadLine());
+            int starCount = 1;
+
+            Console.Write(new string(' ' , input));
+            Console.Write('|');
+            Console.Write(new string(' ', input));
+            Console.WriteLine();
+            for (int i = 0; i < input; i++)
+            {
+                Console.Write(new string(' ' , input - starCount));
+                Console.Write(new string('*' , starCount));
+                Console.Write('|');
+                Console.Write(new string('*', starCount));
+                Console.Write(new string(' ', input - starCount));
+                Console.WriteLine();
+                starCount++;
+
+            }
+        }
+    }
+}
